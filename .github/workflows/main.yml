@@ -93,9 +93,12 @@ jobs:
           name: ibex_imaging_python_wheels
       - name: Release
         uses: softprops/action-gh-release@v2
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           files: ibex_imaging_knowledge_base_utilities-*any.whl
           body_path: release_notes.txt
+
           
 
           
