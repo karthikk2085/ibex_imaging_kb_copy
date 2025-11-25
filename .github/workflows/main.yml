@@ -66,7 +66,7 @@ jobs:
         python -m pytest -v --tb=short
     - name: Upload wheels
       if: github.event_name == 'push'
-      uses: actions/upload-artifact@v5
+      uses: actions/upload-artifact@v4
       with:
         name: ibex_imaging_python_wheels
         path: dist/ibex_imaging_knowledge_base_utilities-*any.whl
@@ -87,7 +87,7 @@ jobs:
         run: |
           python create_release_notes.py ${{ github.repository }} ibex_imaging_knowledge_base_utilities ${{ github.ref_name }}
           cat release_notes.txt
-      - uses: actions/download-artifact@v6
+      - uses: actions/download-artifact@v4
         id: download
         with:
           name: ibex_imaging_python_wheels
