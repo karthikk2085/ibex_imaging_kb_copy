@@ -83,6 +83,7 @@ jobs:
       - name: Prepare release notes
         run: |
           python create_release_notes.py ${{ github.repository }} ibex_imaging_knowledge_base_utilities ${{ github.ref_name }}
+          cat release_notes.txt
       - uses: actions/download-artifact@v6
         id: download
         with:
