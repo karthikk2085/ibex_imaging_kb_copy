@@ -18,6 +18,10 @@ Using a manual approach to create the release notes instead of automatically der
 needed. This is equivalent to summarizing all activity on a feature branch versus reporting all commits on that branch.
 
 ## Unreleased
+## v1.1.0
+
+### Added
+Just created a new tag
 
 ## v0.9.8
 
