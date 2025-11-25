@@ -10,6 +10,7 @@ on:
     branches:
       - main
 
+
 jobs:
   preliminary_test: # run all pre-commit tests (see .pre-commit-config.yaml)
     runs-on: macos-latest
@@ -71,6 +72,8 @@ jobs:
         path: dist/ibex_imaging_knowledge_base_utilities-*any.whl
   
   github_release:
+    permissions:
+      contents: write # Grant write access only for this job
     needs: build_test_and_upload
     if: startsWith(github.ref, 'refs/tags/v')
     runs-on: macos-latest
